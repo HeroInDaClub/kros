@@ -1,11 +1,15 @@
 package com.example.krossword
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
+import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 
@@ -165,6 +169,20 @@ class MainActivity : AppCompatActivity() {
         vvod()
 
 
+        var countTextView = findViewById<TextView>(R.id.count)
+        val countText = countTextView.text.toString()
+        val count = countText.toInt()
+
+        val lvl2But = findViewById<Button>(R.id.button)
+        if (count<10){
+            lvl2But.setOnClickListener{
+                    Toast.makeText(applicationContext, "Слишком лох чтобы перейти дальше(", Toast.LENGTH_SHORT).show()
+            }
+        } else{
+            lvl2But.setOnClickListener {
+                startActivity(Intent(this, Level2::class.java))
+            }
+        }
 
 
     }
