@@ -1,0 +1,1535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat_medium"
+            android:paddingEnd="5dp"
+            android:text="Счет:"
+            android:textAlignment="viewEnd"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="50dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.64">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextText1"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:hint="1"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextText2"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText3"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:hint="2"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextText4"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText5"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextText6"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText7"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextText8"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText9"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText10"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:hint="4"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextText11"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:hint="5"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/editTextText12"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/editTextText13"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/editTextText14"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/editTextText15"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/editTextText16"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:hint="3"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/editTextText17"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/editTextText777"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/editTextText18"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/editTextText19"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/editTextText20"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/editTextText21"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/editTextText22"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/editTextText23"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/editTextText24"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextText25"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText26"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText27"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText28"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextText29"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText30"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText31"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText32"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp">
+
+            <EditText
+                android:id="@+id/editTextText33"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText34"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText35"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText36"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextText37"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText38"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText39"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText40"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextText41"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText42"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText43"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText44"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextText45"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText46"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText47"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText48"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextText49"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText50"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText51"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText52"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextText53"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText54"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText55"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText56"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText57"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText58"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText59"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText60"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText61"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText62"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText63"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText64"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText65"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText66"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
+                android:inputType="text"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextText67"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:inputType="text"
+                android:maxLength="1" />
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="380dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00B8D4"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/sled"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:cornerRadius="5dp" />
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/frame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
