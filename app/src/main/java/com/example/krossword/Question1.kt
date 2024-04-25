@@ -53,13 +53,7 @@ class Question1 : Fragment() {
             val mainActivity = activity as MainActivity
             mainActivity.act()
             mainActivity.vvod()
-            val button = view.findViewById<ImageView>(R.id.imageBut)
-            button.setOnClickListener {
-                val mainActivity = activity as MainActivity
-                mainActivity.act()
-                mainActivity.vvod()
-
-            }
+         //закрытие фрагмента
         }
 
         val button1 = view.findViewById<Button>(R.id.button3)
