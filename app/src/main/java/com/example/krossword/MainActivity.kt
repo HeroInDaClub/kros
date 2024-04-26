@@ -15,6 +15,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentManager
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 
 class MainActivity : AppCompatActivity() {
@@ -174,7 +176,17 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
+        val cheat = findViewById<Button>(R.id.button4)
+        cheat.setOnClickListener {
+            GlobalScope.launch {
+                val level2 = Level2()
+                var countTextView = findViewById<TextView>(R.id.count)
+                val countText = countTextView.text.toString()
+                var count = countText.toInt()
+                level2.lastCounter(count)
+            }
+            startActivity(Intent(this, Level2::class.java))
+        }
 
         val lvl2But = findViewById<Button>(R.id.button)
         lvl2But.setOnClickListener {
@@ -198,8 +210,16 @@ var a = 0
         if(a==5){
             val lvl2But = findViewById<Button>(R.id.button)
             lvl2But.setOnClickListener {
+                GlobalScope.launch {
+                    val level2 = Level2()
+                    var countTextView = findViewById<TextView>(R.id.count)
+                    val countText = countTextView.text.toString()
+                    var count = countText.toInt()
+                    level2.lastCounter(count)
+                }
                 startActivity(Intent(this, Level2::class.java))
             }
+
         }
     }
 
