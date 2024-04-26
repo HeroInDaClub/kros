@@ -47,42 +47,129 @@ class Question1 : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val mainActivity = activity as MainActivity
 
-        val button = view.findViewById<ImageView>(R.id.imageBut)
-        button.setOnClickListener {
-            val mainActivity = activity as MainActivity
-            mainActivity.act()
-            mainActivity.vvod()
-            val button = view.findViewById<ImageView>(R.id.imageBut)
-            button.setOnClickListener {
-                val mainActivity = activity as MainActivity
-                mainActivity.act()
-                mainActivity.vvod()
-
-            }
-        }
 
         val button1 = view.findViewById<Button>(R.id.button3)
         val editText = view.findViewById<EditText>(R.id.editTextText68)
         editText.requestFocus()
+        mainActivity.showKeyboard(editText)
         button1.setOnClickListener {
+            val podskaz = view.findViewById<TextView>(R.id.podskaz)
+            val help = view.findViewById<TextView>(R.id.podskazText)
             val answer = editText.text.toString().trim().toLowerCase()
-            var correct = false
-            when (arguments?.getInt("value")) {
-                1 -> correct = answer == "адаптируемость"
-                2 -> correct = answer == "масштабируемость"
-                3 -> correct = answer == "распределенность"
-                4 -> correct = answer == "репозитории"
-                5 -> correct = answer == "интегрируемость"
-            }
-            if (correct) {
-                editText.background = ContextCompat.getDrawable(requireContext(), R.drawable.true_input_bg)
+            if (answer.isNotEmpty()) {
+                help.text = ""
+                when (arguments?.getInt("value")) {
+                    1 -> {
+                        if (answer == "адаптируемость") {
+                            mainActivity.vvod()
+                            parentFragmentManager.beginTransaction()
+                                .hide(this)
+                                .commit()
+                            mainActivity.firstAnsw()
+                            mainActivity.vvod()
+                            mainActivity.act()
+                            mainActivity.progress()
+                        } else {
 
+                            podskaz.setTextColor(ContextCompat.getColor(requireContext(), R.color.black))
+                            podskaz.setOnClickListener {
+                                help.text = "А _ _ _ т _ _ у _ _ _ _ т _"
+                                mainActivity.counter(5,2)
+                            }
+                        }
+                    }
+                    2 -> {
+                        if (answer == "масштабируемость") {
+                            mainActivity.vvod()
+                            parentFragmentManager.beginTransaction()
+                                .hide(this)
+                                .commit()
+                            mainActivity.secondAnsw()
+                            mainActivity.vvod()
+                            mainActivity.act()
+                            mainActivity.progress()
+                        } else {
+                            podskaz.setTextColor(ContextCompat.getColor(requireContext(), R.color.black))
+                            podskaz.setOnClickListener {
+                                help.text = "М а _ _ _ _ _ _ р _ _ _ _ _ _ ь"
+                                mainActivity.counter(5,2)
+                            }
+                        }
+                    }
+                    3 -> {
+                        if (answer == "распределенность") {
+                            mainActivity.vvod()
+                            parentFragmentManager.beginTransaction()
+                                .hide(this)
+                                .commit()
+                            mainActivity.thirdAnsw()
+                            mainActivity.vvod()
+                            mainActivity.act()
+                            mainActivity.progress()
+                        } else {
+                            podskaz.setTextColor(ContextCompat.getColor(requireContext(), R.color.black))
+                            podskaz.setOnClickListener {
+                                help.text = "р _ _ _ _ е _ _ _ _ н _ _ _ т _"
+                                mainActivity.counter(5,2)
+                            }
+                        }
+                    }
+                    4 -> {
+                        if (answer == "репозитории") {
+                            mainActivity.vvod()
+                            parentFragmentManager.beginTransaction()
+                                .hide(this)
+                                .commit()
+                            mainActivity.fourthAnsw()
+                            mainActivity.vvod()
+                            mainActivity.act()
+                            mainActivity.progress()
+                        } else {
+
+                            podskaz.setTextColor(ContextCompat.getColor(requireContext(), R.color.black))
+                            podskaz.setOnClickListener {
+                                help.text = "_ е _ _ _ _ т _ _ _ и"
+                                mainActivity.counter(5,2)
+                            }
+                        }
+                    }
+                    5 -> {
+                        if (answer == "интегрируемость") {
+                            mainActivity.vvod()
+                            parentFragmentManager.beginTransaction()
+                                .hide(this)
+                                .commit()
+                            mainActivity.fiveAnsw()
+                            mainActivity.vvod()
+                            mainActivity.act()
+                            mainActivity.progress()
+                        } else {
+
+                            podskaz.setTextColor(ContextCompat.getColor(requireContext(), R.color.black))
+                            podskaz.setOnClickListener {
+                                help.text = "_ н _ _ _ р _ _ _ е _ _ _ т _"
+                                mainActivity.counter(5,2)
+                            }
+                        }
+                    }
+                }
             } else {
-                val podskaz = view.findViewById<TextView>(R.id.podskaz)
-                podskaz.setTextColor(ContextCompat.getColor(requireContext(), R.color.black))
+                help.text = "Поле ответ ничего не содержит, умно))))"
             }
+
         }
+        val button = view.findViewById<ImageView>(R.id.imageBut)
+        button.setOnClickListener {
+            mainActivity.vvod()
+            mainActivity.act()
+            parentFragmentManager.beginTransaction()
+                .hide(this)
+                .commit()
+            mainActivity.hideKeyboard(editText)
+        }
+
     }
 
 

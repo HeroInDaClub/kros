@@ -1231,6 +1231,7 @@
                 android:id="@+id/editTextText59"
                 android:layout_width="25dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
                 android:layout_marginTop="2dp"
                 android:background="@drawable/input_bg"
                 android:ems="10"
@@ -1489,8 +1490,11 @@
                 android:layout_marginTop="2dp"
                 android:background="@drawable/input_bg"
                 android:ems="10"
+                android:fontFamily="@font/montserrat_medium"
                 android:inputType="text"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:textColor="#000000" />
         </TableRow>
 
     </TableLayout>

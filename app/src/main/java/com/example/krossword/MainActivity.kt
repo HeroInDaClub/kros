@@ -1,17 +1,20 @@
 package com.example.krossword
 
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
+import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.FragmentManager
 
 
 class MainActivity : AppCompatActivity() {
@@ -169,34 +172,65 @@ class MainActivity : AppCompatActivity() {
         vvod()
 
 
-        var countTextView = findViewById<TextView>(R.id.count)
-        val countText = countTextView.text.toString()
-        val count = countText.toInt()
+
+
+
 
         val lvl2But = findViewById<Button>(R.id.button)
-        if (count<10){
-            lvl2But.setOnClickListener{
-                    Toast.makeText(applicationContext, "Слишком лох чтобы перейти дальше(", Toast.LENGTH_SHORT).show()
+        lvl2But.setOnClickListener {
+                Toast.makeText(
+                    applicationContext,
+                    "Для продолжения нужно ответить на все вопросы",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
-        } else{
-            lvl2But.setOnClickListener {
-                startActivity(Intent(this, Level2::class.java))
-            }
+
+
+    }
+
+var a = 0
+
+    fun progress(){
+      a+=1
+        if(a==5){
+            goNext()
+        }
+    }
+
+    private fun goNext() {
+        val lvl2But = findViewById<Button>(R.id.button)
+        lvl2But.setOnClickListener {
+            startActivity(Intent(this, Level2::class.java))
+        }
+    }
+
+    fun counter(a:Int, b:Int){
+        var countTextView = findViewById<TextView>(R.id.count)
+        val countText = countTextView.text.toString()
+        var count = countText.toInt()
+
+        if(b == 1){
+            count+= a
+            countTextView.text = count.toString()
+        }else if(b == 2){
+            count-= a
+            countTextView.text = count.toString()
         }
 
 
     }
 
+    fun showKeyboard(view: View) {
+        val inputMethodManager = view.context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.showSoftInput(view, InputMethodManager.SHOW_IMPLICIT)
+    }
 
-
+    fun hideKeyboard(view: View) {
+        val inputMethodManager = view.context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+    }
 
     fun act(){
-        val fragmentManager = supportFragmentManager
-        val fragments = fragmentManager.fragments
-
-        for (fragment in fragments) {
-            fragmentManager.beginTransaction().remove(fragment).commit()
-        }
         val que1 = findViewById<EditText>(R.id.editTextText1)
         val que2 = findViewById<EditText>(R.id.editTextText3)
         val que3 = findViewById<EditText>(R.id.editTextText16)
@@ -209,7 +243,6 @@ class MainActivity : AppCompatActivity() {
         que5.isEnabled =true
     }
 
-
     fun vvod(){
         val que1 = findViewById<EditText>(R.id.editTextText1)
         val que2 = findViewById<EditText>(R.id.editTextText3)
@@ -218,7 +251,9 @@ class MainActivity : AppCompatActivity() {
         val que5 = findViewById<EditText>(R.id.editTextText11)
         val onFocusChangeListener1 = View.OnFocusChangeListener { v, hasFocus ->
             if (hasFocus) {
+
                 supportFragmentManager.beginTransaction().replace(R.id.frame, Question1.newInstance(1)).addToBackStack(null).commit()
+
                 que1.isEnabled =false
                 que2.isEnabled =false
                 que3.isEnabled =false
@@ -278,6 +313,256 @@ class MainActivity : AppCompatActivity() {
             }
         }
         que5.setOnFocusChangeListener(onFocusChangeListener5)
+    }
+
+    fun firstAnsw(){
+        val editText1 = findViewById<EditText>(R.id.editTextText1)
+        val editText2 = findViewById<EditText>(R.id.editTextText2)
+        val editText3 = findViewById<EditText>(R.id.editTextText4)
+        val editText4 = findViewById<EditText>(R.id.editTextText6)
+        val editText5 = findViewById<EditText>(R.id.editTextText8)
+        val editText6 = findViewById<EditText>(R.id.editTextText11)
+        val editText7 = findViewById<EditText>(R.id.editTextText25)
+        val editText8 = findViewById<EditText>(R.id.editTextText29)
+        val editText9 = findViewById<EditText>(R.id.editTextText33)
+        val editText10 = findViewById<EditText>(R.id.editTextText37)
+        val editText11 = findViewById<EditText>(R.id.editTextText41)
+        val editText12 = findViewById<EditText>(R.id.editTextText45)
+        val editText13 = findViewById<EditText>(R.id.editTextText49)
+        val editText14 = findViewById<EditText>(R.id.editTextText53)
+        val editTexts = arrayOf(
+            editText1,
+            editText2,
+            editText3,
+            editText4,
+            editText5,
+            editText6,
+            editText7,
+            editText8,
+            editText9,
+            editText10,
+            editText11,
+            editText12,
+            editText13,
+            editText14)
+        // Заполняем слово "адаптируемость"
+        val word = "АдаптИруемость"
+        var index = 0
+        editTexts.forEach { editText ->
+            if (index < word.length) {
+                editText.setText(word[index].toString())
+            } else {
+                editText.setText("")
+            }
+            index++
+        }
+        for (i in editTexts.indices) {
+            val editText = editTexts[i]
+            editText.background = ContextCompat.getDrawable(this, R.drawable.true_input_bg)
+        }
+        hideKeyboard(editText1)
+        counter(15,1)
+
+    }
+
+    fun secondAnsw() {
+        val editText1 = findViewById<EditText>(R.id.editTextText3)
+        val editText2 = findViewById<EditText>(R.id.editTextText5)
+        val editText3 = findViewById<EditText>(R.id.editTextText7)
+        val editText4 = findViewById<EditText>(R.id.editTextText9)
+        val editText5 = findViewById<EditText>(R.id.editTextText13)
+        val editText6 = findViewById<EditText>(R.id.editTextText26)
+        val editText7 = findViewById<EditText>(R.id.editTextText30)
+        val editText8 = findViewById<EditText>(R.id.editTextText34)
+        val editText9 = findViewById<EditText>(R.id.editTextText38)
+        val editText10 = findViewById<EditText>(R.id.editTextText42)
+        val editText11 = findViewById<EditText>(R.id.editTextText46)
+        val editText12 = findViewById<EditText>(R.id.editTextText50)
+        val editText13 = findViewById<EditText>(R.id.editTextText54)
+        val editText14 = findViewById<EditText>(R.id.editTextText57)
+        val editText15 = findViewById<EditText>(R.id.editTextText60)
+        val editText16 = findViewById<EditText>(R.id.editTextText62)
+        val editTexts = arrayOf(
+            editText1,
+            editText2,
+            editText3,
+            editText4,
+            editText5,
+            editText6,
+            editText7,
+            editText8,
+            editText9,
+            editText10,
+            editText11,
+            editText12,
+            editText13,
+            editText14,
+            editText15,
+            editText16)
+        // Заполняем слово "адаптируемость"
+        val word = "Масштабируемость"
+        var index = 0
+        editTexts.forEach { editText ->
+            if (index < word.length) {
+                editText.setText(word[index].toString())
+            } else {
+                editText.setText("")
+            }
+            index++
+        }
+        for (i in editTexts.indices) {
+            val editText = editTexts[i]
+            editText.background = ContextCompat.getDrawable(this, R.drawable.true_input_bg)
+        }
+        hideKeyboard(editText1)
+        counter(16,1)
+    }
+
+    fun thirdAnsw() {
+        val editText1 = findViewById<EditText>(R.id.editTextText16)
+        val editText2 = findViewById<EditText>(R.id.editTextText27)
+        val editText3 = findViewById<EditText>(R.id.editTextText31)
+        val editText4 = findViewById<EditText>(R.id.editTextText35)
+        val editText5 = findViewById<EditText>(R.id.editTextText39)
+        val editText6 = findViewById<EditText>(R.id.editTextText43)
+        val editText7 = findViewById<EditText>(R.id.editTextText47)
+        val editText8 = findViewById<EditText>(R.id.editTextText51)
+        val editText9 = findViewById<EditText>(R.id.editTextText55)
+        val editText10 = findViewById<EditText>(R.id.editTextText58)
+        val editText11 = findViewById<EditText>(R.id.editTextText61)
+        val editText12 = findViewById<EditText>(R.id.editTextText63)
+        val editText13 = findViewById<EditText>(R.id.editTextText64)
+        val editText14 = findViewById<EditText>(R.id.editTextText65)
+        val editText15 = findViewById<EditText>(R.id.editTextText66)
+        val editText16 = findViewById<EditText>(R.id.editTextText67)
+        val editTexts = arrayOf(
+            editText1,
+            editText2,
+            editText3,
+            editText4,
+            editText5,
+            editText6,
+            editText7,
+            editText8,
+            editText9,
+            editText10,
+            editText11,
+            editText12,
+            editText13,
+            editText14,
+            editText15,
+            editText16)
+        // Заполняем слово "адаптируемость"
+        val word = "Распределенность"
+        var index = 0
+        editTexts.forEach { editText ->
+            if (index < word.length) {
+                editText.setText(word[index].toString())
+            } else {
+                editText.setText("")
+            }
+            index++
+        }
+        for (i in editTexts.indices) {
+            val editText = editTexts[i]
+            editText.background = ContextCompat.getDrawable(this, R.drawable.true_input_bg)
+        }
+        hideKeyboard(editText1)
+        counter(16, 1)
+    }
+
+    fun fourthAnsw() {
+        val editText1 = findViewById<EditText>(R.id.editTextText10)
+        val editText2 = findViewById<EditText>(R.id.editTextText19)
+        val editText3 = findViewById<EditText>(R.id.editTextText28)
+        val editText4 = findViewById<EditText>(R.id.editTextText32)
+        val editText5 = findViewById<EditText>(R.id.editTextText36)
+        val editText6 = findViewById<EditText>(R.id.editTextText40)
+        val editText7 = findViewById<EditText>(R.id.editTextText44)
+        val editText8 = findViewById<EditText>(R.id.editTextText48)
+        val editText9 = findViewById<EditText>(R.id.editTextText52)
+        val editText10 = findViewById<EditText>(R.id.editTextText56)
+        val editText11 = findViewById<EditText>(R.id.editTextText59)
+        val editTexts = arrayOf(
+            editText1,
+            editText2,
+            editText3,
+            editText4,
+            editText5,
+            editText6,
+            editText7,
+            editText8,
+            editText9,
+            editText10,
+            editText11,)
+        // Заполняем слово "адаптируемость"
+        val word = "Репозитории"
+        var index = 0
+        editTexts.forEach { editText ->
+            if (index < word.length) {
+                editText.setText(word[index].toString())
+            } else {
+                editText.setText("")
+            }
+            index++
+        }
+        for (i in editTexts.indices) {
+            val editText = editTexts[i]
+            editText.background = ContextCompat.getDrawable(this, R.drawable.true_input_bg)
+        }
+        hideKeyboard(editText1)
+        counter(16,1)
+    }
+
+    fun fiveAnsw() {
+        val editText1 = findViewById<EditText>(R.id.editTextText11)
+        val editText2 = findViewById<EditText>(R.id.editTextText12)
+        val editText3 = findViewById<EditText>(R.id.editTextText13)
+        val editText4 = findViewById<EditText>(R.id.editTextText14)
+        val editText5 = findViewById<EditText>(R.id.editTextText15)
+        val editText6 = findViewById<EditText>(R.id.editTextText16)
+        val editText7 = findViewById<EditText>(R.id.editTextText17)
+        val editText8 = findViewById<EditText>(R.id.editTextText777)
+        val editText9 = findViewById<EditText>(R.id.editTextText18)
+        val editText10 = findViewById<EditText>(R.id.editTextText19)
+        val editText11 = findViewById<EditText>(R.id.editTextText20)
+        val editText12 = findViewById<EditText>(R.id.editTextText21)
+        val editText13 = findViewById<EditText>(R.id.editTextText22)
+        val editText14 = findViewById<EditText>(R.id.editTextText23)
+        val editText15 = findViewById<EditText>(R.id.editTextText24)
+        val editTexts = arrayOf(
+            editText1,
+            editText2,
+            editText3,
+            editText4,
+            editText5,
+            editText6,
+            editText7,
+            editText8,
+            editText9,
+            editText10,
+            editText11,
+            editText12,
+            editText13,
+            editText14,
+            editText15,)
+        // Заполняем слово "адаптируемость"
+        val word = "ИнтегРируемость"
+        var index = 0
+        editTexts.forEach { editText ->
+            if (index < word.length) {
+                editText.setText(word[index].toString())
+            } else {
+                editText.setText("")
+            }
+            index++
+        }
+        for (i in editTexts.indices) {
+            val editText = editTexts[i]
+            editText.background = ContextCompat.getDrawable(this, R.drawable.true_input_bg)
+        }
+        hideKeyboard(editText1)
+        counter(16,1)
     }
 }
 
