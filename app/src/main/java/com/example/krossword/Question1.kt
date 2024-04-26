@@ -49,7 +49,6 @@ class Question1 : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val mainActivity = activity as MainActivity
 
-
         val button1 = view.findViewById<Button>(R.id.button3)
         val editText = view.findViewById<EditText>(R.id.editTextText68)
         editText.requestFocus()
