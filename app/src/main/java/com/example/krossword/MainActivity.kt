@@ -190,20 +190,22 @@ class MainActivity : AppCompatActivity() {
 
 var a = 0
 
+
+    //это короче функция для перехода на след экран
+    // типо считает верные ответы
     fun progress(){
       a+=1
         if(a==5){
-            goNext()
+            val lvl2But = findViewById<Button>(R.id.button)
+            lvl2But.setOnClickListener {
+                startActivity(Intent(this, Level2::class.java))
+            }
         }
     }
 
-    private fun goNext() {
-        val lvl2But = findViewById<Button>(R.id.button)
-        lvl2But.setOnClickListener {
-            startActivity(Intent(this, Level2::class.java))
-        }
-    }
 
+
+    //функция счетчика, изменяет значение в + если вторым параметром число 1, и в - если вторым параметром число 2(первое число это кол-во баллов, сколько хочешь вычесть или прибавить)
     fun counter(a:Int, b:Int){
         var countTextView = findViewById<TextView>(R.id.count)
         val countText = countTextView.text.toString()
@@ -219,17 +221,17 @@ var a = 0
 
 
     }
-
+    //функция показа клавы (как входной параметр можешь указать любой EditText вообще без разницы)
     fun showKeyboard(view: View) {
         val inputMethodManager = view.context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.showSoftInput(view, InputMethodManager.SHOW_IMPLICIT)
     }
-
+    //функция скрытия клавы (как входной параметр можешь указать любой EditText вообще без разницы)
     fun hideKeyboard(view: View) {
         val inputMethodManager = view.context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
     }
-
+    //Функция активирует поля, которые становятся неактивными на время показа фрагмента
     fun act(){
         val que1 = findViewById<EditText>(R.id.editTextText1)
         val que2 = findViewById<EditText>(R.id.editTextText3)
@@ -242,7 +244,7 @@ var a = 0
         que4.isEnabled =true
         que5.isEnabled =true
     }
-
+    //Функция обрабатывающая ввод оветов
     fun vvod(){
         val que1 = findViewById<EditText>(R.id.editTextText1)
         val que2 = findViewById<EditText>(R.id.editTextText3)
@@ -314,7 +316,7 @@ var a = 0
         }
         que5.setOnFocusChangeListener(onFocusChangeListener5)
     }
-
+    //Функция отображения уже верного овета
     fun firstAnsw(){
         val editText1 = findViewById<EditText>(R.id.editTextText1)
         val editText2 = findViewById<EditText>(R.id.editTextText2)
@@ -364,7 +366,7 @@ var a = 0
         counter(15,1)
 
     }
-
+    //Функция отображения уже верного овета
     fun secondAnsw() {
         val editText1 = findViewById<EditText>(R.id.editTextText3)
         val editText2 = findViewById<EditText>(R.id.editTextText5)
@@ -417,7 +419,7 @@ var a = 0
         hideKeyboard(editText1)
         counter(16,1)
     }
-
+    //Функция отображения уже верного овета
     fun thirdAnsw() {
         val editText1 = findViewById<EditText>(R.id.editTextText16)
         val editText2 = findViewById<EditText>(R.id.editTextText27)
@@ -470,7 +472,7 @@ var a = 0
         hideKeyboard(editText1)
         counter(16, 1)
     }
-
+    //Функция отображения уже верного овета
     fun fourthAnsw() {
         val editText1 = findViewById<EditText>(R.id.editTextText10)
         val editText2 = findViewById<EditText>(R.id.editTextText19)
@@ -513,7 +515,7 @@ var a = 0
         hideKeyboard(editText1)
         counter(16,1)
     }
-
+    //Функция отображения уже верного овета
     fun fiveAnsw() {
         val editText1 = findViewById<EditText>(R.id.editTextText11)
         val editText2 = findViewById<EditText>(R.id.editTextText12)
