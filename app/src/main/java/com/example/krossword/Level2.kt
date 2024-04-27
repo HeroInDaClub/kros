@@ -3,20 +3,19 @@ package com.example.krossword
 import android.content.Context
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 
 class Level2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_level2)
-
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.statusBarColor = ContextCompat.getColor(this, R.color.white)
@@ -132,7 +131,7 @@ class Level2 : AppCompatActivity() {
         if(a==5){
             val lvl2But = findViewById<Button>(R.id.button)
             lvl2But.setOnClickListener {
-                startActivity(Intent(this, Level2::class.java))
+
             }
         }
     }
@@ -284,7 +283,8 @@ class Level2 : AppCompatActivity() {
             editText5,
             editText6,
             editText7,
-            editText8,)
+            editText8,
+        )
         // Заполняем слово "адаптируемость"
         val word = "команда"
         var index = 0

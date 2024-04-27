@@ -15,8 +15,7 @@ import androidx.fragment.app.FragmentManager
 class Question2 : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-        }
+
     }
 
     override fun onCreateView(
@@ -49,12 +48,12 @@ class Question2 : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val mainActivity = activity as Level2
+        val lvl2 = activity as Level2
 
         val button1 = view.findViewById<Button>(R.id.button3)
         val editText = view.findViewById<EditText>(R.id.editTextText68)
         editText.requestFocus()
-        mainActivity.showKeyboard(editText)
+        lvl2.showKeyboard(editText)
         button1.setOnClickListener {
             val podskaz = view.findViewById<TextView>(R.id.podskaz)
             val help = view.findViewById<TextView>(R.id.podskazText)
@@ -64,113 +63,113 @@ class Question2 : Fragment() {
                 when (arguments?.getInt("value")) {
                     1 -> {
                         if (answer == "команда") {
-                            mainActivity.vvod()
+                            lvl2.vvod()
                             parentFragmentManager.beginTransaction()
                                 .hide(this)
                                 .commit()
-                            mainActivity.firstAnsw()
-                            mainActivity.vvod()
-                            mainActivity.act()
-                            mainActivity.progress()
+                            lvl2.firstAnsw()
+                            lvl2.vvod()
+                            lvl2.act()
+                            lvl2.progress()
                         } else {
 
                             podskaz.setTextColor(ContextCompat.getColor(requireContext(), R.color.black))
                             podskaz.setOnClickListener {
                                 help.text = "А _ _ _ т _ _ у _ _ _ _ т _"
-                                mainActivity.counter(5,2)
+                                lvl2.counter(5,2)
                             }
                         }
                     }
                     2 -> {
                         if (answer == "акцепт") {
-                            mainActivity.vvod()
+                            lvl2.vvod()
                             parentFragmentManager.beginTransaction()
                                 .hide(this)
                                 .commit()
-                            mainActivity.secondAnsw()
-                            mainActivity.vvod()
-                            mainActivity.act()
-                            mainActivity.progress()
+                            lvl2.secondAnsw()
+                            lvl2.vvod()
+                            lvl2.act()
+                            lvl2.progress()
                         } else {
                             podskaz.setTextColor(ContextCompat.getColor(requireContext(), R.color.black))
                             podskaz.setOnClickListener {
                                 help.text = "М а _ _ _ _ _ _ р _ _ _ _ _ _ ь"
-                                mainActivity.counter(5,2)
+                                lvl2.counter(5,2)
                             }
                         }
                     }
                     3 -> {
                         if (answer == "энтерпрайз") {
-                            mainActivity.vvod()
+                            lvl2.vvod()
                             parentFragmentManager.beginTransaction()
                                 .hide(this)
                                 .commit()
-                            mainActivity.thirdAnsw()
-                            mainActivity.vvod()
-                            mainActivity.act()
-                            mainActivity.progress()
+                            lvl2.thirdAnsw()
+                            lvl2.vvod()
+                            lvl2.act()
+                            lvl2.progress()
                         } else {
                             podskaz.setTextColor(ContextCompat.getColor(requireContext(), R.color.black))
                             podskaz.setOnClickListener {
                                 help.text = "р _ _ _ _ е _ _ _ _ н _ _ _ т _"
-                                mainActivity.counter(5,2)
+                                lvl2.counter(5,2)
                             }
                         }
                     }
                     4 -> {
                         if (answer == "коллабор") {
-                            mainActivity.vvod()
+                            lvl2.vvod()
                             parentFragmentManager.beginTransaction()
                                 .hide(this)
                                 .commit()
-                            mainActivity.fourthAnsw()
-                            mainActivity.vvod()
-                            mainActivity.act()
-                            mainActivity.progress()
+                            lvl2.fourthAnsw()
+                            lvl2.vvod()
+                            lvl2.act()
+                            lvl2.progress()
                         } else {
 
                             podskaz.setTextColor(ContextCompat.getColor(requireContext(), R.color.black))
                             podskaz.setOnClickListener {
                                 help.text = "_ е _ _ _ _ т _ _ _ и"
-                                mainActivity.counter(5,2)
+                                lvl2.counter(5,2)
                             }
                         }
                     }
                     5 -> {
                         if (answer == "анализ") {
-                            mainActivity.vvod()
+                            lvl2.vvod()
                             parentFragmentManager.beginTransaction()
                                 .hide(this)
                                 .commit()
-                            mainActivity.fiveAnsw()
-                            mainActivity.vvod()
-                            mainActivity.act()
-                            mainActivity.progress()
+                            lvl2.fiveAnsw()
+                            lvl2.vvod()
+                            lvl2.act()
+                            lvl2.progress()
                         } else {
 
                             podskaz.setTextColor(ContextCompat.getColor(requireContext(), R.color.black))
                             podskaz.setOnClickListener {
                                 help.text = "_ н _ _ _ р _ _ _ е _ _ _ т _"
-                                mainActivity.counter(5,2)
+                                lvl2.counter(5,2)
                             }
                         }
                     }
                     6 -> {
                         if (answer == "финансы") {
-                            mainActivity.vvod()
+                            lvl2.vvod()
                             parentFragmentManager.beginTransaction()
                                 .hide(this)
                                 .commit()
-                            mainActivity.sixAnsw()
-                            mainActivity.vvod()
-                            mainActivity.act()
-                            mainActivity.progress()
+                            lvl2.sixAnsw()
+                            lvl2.vvod()
+                            lvl2.act()
+                            lvl2.progress()
                         } else {
 
                             podskaz.setTextColor(ContextCompat.getColor(requireContext(), R.color.black))
                             podskaz.setOnClickListener {
                                 help.text = "_ н _ _ _ р _ _ _ е _ _ _ т _"
-                                mainActivity.counter(5,2)
+                                lvl2.counter(5,2)
                             }
                         }
                     }
@@ -182,12 +181,12 @@ class Question2 : Fragment() {
         }
         val button = view.findViewById<ImageView>(R.id.imageBut)
         button.setOnClickListener {
-            mainActivity.vvod()
-            mainActivity.act()
+            lvl2.vvod()
+            lvl2.act()
             parentFragmentManager.beginTransaction()
                 .hide(this)
                 .commit()
-            mainActivity.hideKeyboard(editText)
+            lvl2.hideKeyboard(editText)
         }
 
     }

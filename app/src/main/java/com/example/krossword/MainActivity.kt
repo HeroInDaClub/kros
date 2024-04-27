@@ -2,11 +2,9 @@ package com.example.krossword
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.view.View
-import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
@@ -14,7 +12,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.FragmentManager
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
@@ -178,13 +175,7 @@ class MainActivity : AppCompatActivity() {
 
         val cheat = findViewById<Button>(R.id.button4)
         cheat.setOnClickListener {
-            GlobalScope.launch {
-                val level2 = Level2()
-                var countTextView = findViewById<TextView>(R.id.count)
-                val countText = countTextView.text.toString()
-                var count = countText.toInt()
-                level2.lastCounter(count)
-            }
+
             startActivity(Intent(this, Level2::class.java))
         }
 
@@ -205,21 +196,13 @@ var a = 0
 
     //это короче функция для перехода на след экран
     // типо считает верные ответы
-    fun progress(){
-      a+=1
-        if(a==5){
+    fun progress() {
+        a += 1
+        if (a == 5) {
             val lvl2But = findViewById<Button>(R.id.button)
             lvl2But.setOnClickListener {
-                GlobalScope.launch {
-                    val level2 = Level2()
-                    var countTextView = findViewById<TextView>(R.id.count)
-                    val countText = countTextView.text.toString()
-                    var count = countText.toInt()
-                    level2.lastCounter(count)
-                }
                 startActivity(Intent(this, Level2::class.java))
             }
-
         }
     }
 
@@ -516,7 +499,8 @@ var a = 0
             editText8,
             editText9,
             editText10,
-            editText11,)
+            editText11,
+        )
         // Заполняем слово "адаптируемость"
         val word = "Репозитории"
         var index = 0
@@ -567,7 +551,8 @@ var a = 0
             editText12,
             editText13,
             editText14,
-            editText15,)
+            editText15,
+        )
         // Заполняем слово "адаптируемость"
         val word = "ИнтегРируемость"
         var index = 0
