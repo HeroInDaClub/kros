@@ -38,18 +38,6 @@ class Question1 : Fragment() {
             textView.text = "Какое хранилище информации, связанной с проектом разработки программного продукта в течение всего его жизненного цикла?"
         }else if(value == 5){
             textView.text = "Что обеспечивает полноту данных?"
-        }else if(value == 21){
-            textView.text = "Группа людей, ответственных за проектирование, разработку и внедрение информационной системы, это"
-        }else if(value == 22){
-            textView.text = "Процесс тестирования и оценки информационной системы для обеспечения соответствия потребностям пользователей"
-        }else if(value == 23){
-            textView.text = "Вид программного обеспечения, автоматизирующий бизнес-процессы и рабочие потоки, такие как обработка заказов или управление запасами"
-        }else if(value == 24){
-            textView.text = "Вид информационной системы, поддерживающий коммуникацию и сотрудничество между отдельными лицами и группами"
-        }else if(value == 25){
-            textView.text = "Вид информационной системы, поддерживающий процессы принятия решений и предоставляющий инструменты анализа"
-        }else if(value == 26){
-            textView.text = "Вид информационной системы, поддерживающий автоматизацию финансовых транзакций и бухгалтерских процессов"
         }
         return view
     }
@@ -59,7 +47,7 @@ class Question1 : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val mainActivity = activity as MainActivity
+         val mainActivity = activity as MainActivity
 
         val button1 = view.findViewById<Button>(R.id.button3)
         val editText = view.findViewById<EditText>(R.id.editTextText68)

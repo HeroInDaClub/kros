@@ -25,7 +25,9 @@ class Level2 : AppCompatActivity() {
             val windowFlags = window.decorView.systemUiVisibility
             window.decorView.systemUiVisibility = windowFlags or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
         }
-
+        var countTextView = findViewById<TextView>(R.id.count)
+        val textViewValue = intent.getStringExtra("textViewValue")
+        countTextView.text = textViewValue
 
         val editText3 = findViewById<EditText>(R.id.editTextText3)
         val editText5 = findViewById<EditText>(R.id.editTextText5)
@@ -146,7 +148,10 @@ class Level2 : AppCompatActivity() {
         val onFocusChangeListener1 = View.OnFocusChangeListener { v, hasFocus ->
             if (hasFocus) {
 
-                supportFragmentManager.beginTransaction().replace(R.id.frame2, Question2.newInstance(1)).addToBackStack(null).commit()
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.frame2, Question2.newInstance(1))
+                    .addToBackStack(null)
+                    .commit()
 
                 que1.isEnabled =false
                 que2.isEnabled =false
@@ -243,15 +248,14 @@ class Level2 : AppCompatActivity() {
         que6.isEnabled =true
     }
 
-    fun lastCounter(count:Int){
-        var countTextView = findViewById<TextView>(R.id.count)
-        val countText = countTextView.text.toString()
-        var count = countText.toInt()
-        countTextView.text = count.toString()
-    }
+
 
     fun counter(a:Int, b:Int){
+
+
         var countTextView = findViewById<TextView>(R.id.count)
+        val textViewValue = intent.getStringExtra("textViewValue")
+        countTextView.text = textViewValue
         val countText = countTextView.text.toString()
         var count = countText.toInt()
 

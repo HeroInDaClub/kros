@@ -175,8 +175,10 @@ class MainActivity : AppCompatActivity() {
 
         val cheat = findViewById<Button>(R.id.button4)
         cheat.setOnClickListener {
-
-            startActivity(Intent(this, Level2::class.java))
+            val textViewValue = findViewById<TextView>(R.id.count).text.toString()
+            val intent = Intent(this, Level2::class.java)
+            intent.putExtra("textViewValue", textViewValue)
+            startActivity(intent)
         }
 
         val lvl2But = findViewById<Button>(R.id.button)
@@ -201,7 +203,12 @@ var a = 0
         if (a == 5) {
             val lvl2But = findViewById<Button>(R.id.button)
             lvl2But.setOnClickListener {
-                startActivity(Intent(this, Level2::class.java))
+                Question1?.supportFragmentManager?.beginTransaction()?.remove(this)?.commit()
+                val textViewValue = findViewById<TextView>(R.id.count).text.toString()
+                val intent = Intent(this, Level2::class.java)
+                intent.putExtra("textViewValue", textViewValue)
+                startActivity(intent)
+
             }
         }
     }
